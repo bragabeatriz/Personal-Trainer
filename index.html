@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beatriz Braga - Personal Trainer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; background-color: #f4f4f4; color: #333; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background-color: #0d47a1; color: #fff; }
+        .logo { font-size: 28px; font-weight: 700; }
+        nav a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: #ff9800; }
+        .hero { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 20px; background: url('images/hero.jpg') center/cover no-repeat; text-align: center; color: #fff; }
+        .hero h1 { font-size: 48px; margin-bottom: 20px; text-shadow: 2px 2px #000; }
+        .hero p { font-size: 20px; text-shadow: 1px 1px #000; }
+        section { padding: 60px 20px; }
+        section h2 { font-size: 32px; color: #0d47a1; margin-bottom: 20px; text-align: center; }
+        section p { font-size: 16px; line-height: 1.6; text-align: center; max-width: 800px; margin: 0 auto 20px; }
+        .cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+        .card { background-color: #fff; border-radius: 15px; width: 300px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.2); display: flex; flex-direction: column; }
+        .card img, .card video { width: 100%; height: 200px; object-fit: cover; }
+        .card-content { padding: 20px; display: flex; flex-direction: column; justify-content: space-between; flex: 1; }
+        .card h3 { color: #ff9800; margin-bottom: 10px; font-size: 20px; }
+        .card p { color: #333; margin-bottom: 15px; font-size: 14px; }
+        .card button { background-color: #ff9800; color: #fff; border: none; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: bold; transition: background 0.3s; }
+        .card button:hover { background-color: #e68a00; }
+        .contact-btn { display: block; text-align: center; margin-top: 20px; }
+        .contact-btn button { background-color: #0d47a1; color: #fff; border: none; padding: 15px 30px; border-radius: 10px; font-size: 18px; cursor: pointer; transition: background 0.3s; }
+        .contact-btn button:hover { background-color: #ff9800; }
+        footer { text-align: center; padding: 20px; background-color: #0d47a1; color: #fff; }
+        @media (max-width: 768px) { .cards { flex-direction: column; align-items: center; } .hero h1 { font-size: 36px; } section h2 { font-size: 28px; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Beatriz Braga</div>
+        <nav>
+            <a href="#consultoria">Consultoria Online</a>
+            <a href="#personal">Personal Trainer</a>
+            <a href="#avaliacao">Avaliação Física</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Treine com Resultados Reais</h1>
+        <p>Consultoria online, treino personalizado em casa ou academia e avaliações físicas profissionais.</p>
+        <div class="contact-btn">
+            <button onclick="window.open('https://wa.me/5521992958820', '_blank')">Fale com a Beatriz no WhatsApp</button>
+        </div>
+    </section>
+
+    <section id="consultoria">
+        <h2>Consultoria Online</h2>
+        <p>Planos personalizados de treino e alimentação para acompanhar seu progresso, totalmente online.</p>
+        <div class="cards">
+            <div class="card">
+                <img src="online.webp" alt="Treino Online">
+                <div class="card-content">
+                    <h3>Treino Online</h3>
+                    <p>Acompanhe seus treinos em vídeo e tenha suporte personalizado da Beatriz.</p>
+                    <button onclick="whatsappContact('Consultoria Online')">Quero Consultoria</button>
+                </div>
+            </div>
+           <div class="card">
+            <iframe width="100%" height="250" src="https://www.youtube.com/embed/xga6VGoNhgM" title="Vídeo de Treino" frameborder="0"allow="accelerometer; autoplay; clipboard-write encrypted-media; gyroscope; picture-in-picture"  allowfullscreen>
+    </iframe>
+
+    <div class="card-content">
+        <h3>Vídeo Treinos</h3>
+        <p>Exemplos de exercícios em vídeo para você realizar no conforto da sua casa.</p>
+        <button onclick="whatsappContact('Consultoria Online')">Quero Consultoria</button>
+    </div>
+</div>
+
+        </div>
+    </section>
+
+    <section id="personal">
+        <h2>Personal Trainer em Casa ou Academia</h2>
+        <p>Treinos presenciais com acompanhamento individualizado, adaptados à sua rotina e objetivos.</p>
+        <div class="cards">
+            <div class="card">
+                <img src="academia.webp" alt="Treino Academia">
+                <div class="card-content">
+                    <h3>Treino Academia</h3>
+                    <p>Treinos adaptados com equipamentos da academia para máxima performance.</p>
+                    <button onclick="whatsappContact('Treino Academia')">Quero Treinar</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="online.webp" alt="Treino em Casa">
+                <div class="card-content">
+                    <h3>Treino em Casa</h3>
+                    <p>Exercícios eficazes no conforto do seu lar, com supervisão e acompanhamento online.</p>
+                    <button onclick="whatsappContact('Treino em Casa')">Quero Treinar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="avaliacao">
+        <h2>Avaliação Física</h2>
+        <p>Mensuração de resultados, composição corporal e análise completa para seu treino ser ainda mais eficiente.</p>
+        <div class="cards">
+            <div class="card">
+                <img src="avaliacao.jpg" alt="Avaliação Física">
+                <div class="card-content">
+                    <h3>Avaliação Detalhada</h3>
+                    <p>Check-up completo do seu corpo para criar treinos personalizados com resultados reais.</p>
+                    <button onclick="whatsappContact('Avaliação Física')">Agendar Avaliação</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Beatriz Braga - Personal Trainer. Todos os direitos reservados.
+    </footer>
+
+    <script>
+        function whatsappContact(service) {
+            const phone = '5521992958820';
+            const message = encodeURIComponent(`Olá Beatriz! Estou interessado(a) no serviço: ${service}`);
+            window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+        }
+    </script>
+</body>
+</html>
